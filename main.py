@@ -4,7 +4,7 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("States Game")
-img = "./blank_states_img.gif"
+img = "./India_States.gif"
 screen.addshape(img)
 turtle.shape(img)
 
@@ -47,7 +47,7 @@ def generate_missed_states():
 
 guess_left = True
 while guess_left:
-    df_states_data = pandas.read_csv("./50_states.csv")
+    df_states_data = pandas.read_csv("./Indian_States.csv")
     # print(df_states_data.state.count())
 
     total_states = df_states_data.state.count()
@@ -87,9 +87,10 @@ while guess_left:
             guess_left = False
 
 
-# Need for getting state coordinates
+# # Needed for getting state coordinates
 # def get_mouse_click_coor(x, y):
 #     print(int(x), int(y))
+#
 #
 # turtle.onscreenclick(get_mouse_click_coor)
 # turtle.mainloop()
